@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Course Tracker</h1>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="courseName">Course Name:</label>
+                <select id="courseName">
+                    <optgroup label="Junior Courses">
+                        <option value="Jr-1">Jr-1</option>
+                        <option value="Jr-2">Jr-2</option>
+                        <option value="Jr-3">Jr-3</option>
+                        <option value="Jr-4">Jr-4</option>
+                    </optgroup>
+                    <optgroup label="Alpha Course">
+                        <option value="Alpha">Alpha</option>
+                    </optgroup>
+                    <optgroup label="Advanced Courses">
+                        <option value="Advanced-1">Advanced-1</option>
+                        <option value="Advanced-2">Advanced-2</option>
+                        <option value="Advanced-3">Advanced-3</option>
+                    </optgroup>
+                    <optgroup label="Pro Courses">
+                        <option value="pro-1">pro-1</option>
+                        <option value="pro-2">pro-2</option>
+                        <option value="pro-3">pro-3</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="courseDate">Date:</label>
+                <input type="date" id="courseDate">
+            </div>
+            <div class="input-group">
+                <label for="startTime">Start Time:</label>
+                <input type="time" id="startTime">
+            </div>
+            <div class="input-group">
+                <label for="endTime">End Time:</label>
+                <input type="time" id="endTime">
+            </div>
+            <div class="input-group">
+                <label for="campus">Campus:</label>
+                <select id="campus">
+                    <option value="Nazareth">Nazareth</option>
+                    <option value="Haifa">Haifa</option>
+                </select>
+            </div>
+            <button id="addCourseBtn">Add Course</button>
+        </div>
+
+        <hr>
+
+        <div class="filter-section">
+            <h2>Filter Courses:</h2>
+            <button class="filter-btn" data-filter="All">All</button>
+            <button class="filter-btn" data-filter="Jr-1">Jr-1</button>
+            <button class="filter-btn" data-filter="Jr-2">Jr-2</button>
+            <button class="filter-btn" data-filter="Jr-3">Jr-3</button>
+            <button class="filter-btn" data-filter="Jr-4">Jr-4</button>
+            <button class="filter-btn" data-filter="Alpha">Alpha</button>
+            <button class="filter-btn" data-filter="Advanced-1">Advanced-1</button>
+            <button class="filter-btn" data-filter="Advanced-2">Advanced-2</button>
+            <button class="filter-btn" data-filter="Advanced-3">Advanced-3</button>
+            <button class="filter-btn" data-filter="pro-1">pro-1</button>
+            <button class="filter-btn" data-filter="pro-2">pro-2</button>
+            <button class="filter-btn" data-filter="pro-3">pro-3</button>
+        </div>
+
+        <hr>
+
+        <div id="courseList" class="course-list">
+            </div>
+    </div>
+
+    <script src="jscript.js"></script>
+</body>
+</html>
