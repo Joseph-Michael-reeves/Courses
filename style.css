@@ -1,4 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap');
+@font-face {
+    font-family: 'Crete Round';
+    src: url('./assets/fonts/CreteRound-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Crete Round';
+    src: url('./assets/fonts/CreteRound-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
 
 body {
     font-family: 'Crete Round', serif;
@@ -790,7 +804,7 @@ h1, h2 {
     width: 34px;
     height: 34px;
     background-color: transparent;
-    background-image: url('https://static.thenounproject.com/png/664333-200.png');
+    background-image: url('./assets/icons/siblings.svg');
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
