@@ -47,10 +47,6 @@
                 <input type="time" id="startTime">
             </div>
             <div class="input-group">
-                <label for="endTime">End Time:</label>
-                <input type="time" id="endTime">
-            </div>
-            <div class="input-group">
                 <label for="campus">Campus:</label>
                 <select id="campus">
                     <option value="Nazareth">Nazareth</option>
@@ -58,6 +54,10 @@
                 </select>
             </div>
             <button id="addCourseBtn">Add Course</button>
+        </div>
+
+        <div class="view-toggle">
+            <button id="toggleViewBtn">Calendar View</button>
         </div>
 
         <hr>
@@ -78,10 +78,49 @@
             <button class="filter-btn" data-filter="pro-3">pro-3</button>
         </div>
 
+        <div class="campus-slider">
+            <label for="campusSlider">Campus:</label>
+            <input type="range" id="campusSlider" min="0" max="2" value="1" step="1">
+            <span id="campusSliderValue">All</span>
+        </div>
+
         <hr>
 
         <div id="courseList" class="course-list">
             </div>
+
+        <div id="calendarWrapper" class="calendar-wrapper hidden">
+            <div class="calendar-header">
+                <button id="prevMonthBtn" class="calendar-nav">Prev</button>
+                <h2 id="calendarMonthLabel"></h2>
+                <button id="nextMonthBtn" class="calendar-nav">Next</button>
+            </div>
+            <div class="calendar-caption">Sun</div>
+            <div class="calendar-caption">Mon</div>
+            <div class="calendar-caption">Tue</div>
+            <div class="calendar-caption">Wed</div>
+            <div class="calendar-caption">Thu</div>
+            <div class="calendar-caption">Fri</div>
+            <div class="calendar-caption">Sat</div>
+            <div id="calendarView" class="calendar-view"></div>
+        </div>
+    </div>
+
+    <div id="courseModal" class="course-modal hidden">
+        <div class="course-modal-content">
+            <button id="modalCloseBtn" class="modal-close">Close</button>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+
+    <div id="dayModal" class="day-modal hidden">
+        <div class="day-modal-content">
+            <div class="day-modal-header">
+                <h3 id="dayModalDate"></h3>
+                <button id="dayModalCloseBtn" class="modal-close" type="button">Close</button>
+            </div>
+            <div id="dayModalSchedule" class="day-modal-body"></div>
+        </div>
     </div>
 
     <script src="jscript.js"></script>
